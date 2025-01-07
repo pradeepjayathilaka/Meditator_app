@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:meditator_app/pages/main_screen.dart';
 
 void main() {
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Meditate flutter",
+      theme: ThemeData(
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       home: MainScreen(),
     );
   }
