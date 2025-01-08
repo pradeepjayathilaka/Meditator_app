@@ -85,29 +85,107 @@ class HomePage extends StatelessWidget {
                               child: Row(
                                 children: [
                                   FilterChip(
-                                    label: const Text("All"),
-                                    onSelected: (value) {},
+                                    label: Text(
+                                      "All",
+                                      style: TextStyle(
+                                        color:
+                                            filterData.getSelectedCategory() ==
+                                                    "All"
+                                                ? AppColors.primaryWhite
+                                                : AppColors.primaryBlack,
+                                      ),
+                                    ),
+                                    onSelected: (bool value) {
+                                      filterData.filteredData("All");
+                                    },
+                                    selected:
+                                        filterData.getSelectedCategory() ==
+                                            "All",
+                                    selectedColor: AppColors.primaryPurple,
+                                    showCheckmark: false,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      side: BorderSide(
+                                        color: AppColors.primaryPurple
+                                            .withOpacity(0.5),
+                                        width: 2,
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 8,
                                   ),
                                   FilterChip(
-                                    label: const Text("Mindfulness"),
-                                    onSelected: (value) {},
+                                    label: Text(
+                                      "Mindfulness",
+                                      style: TextStyle(
+                                        color:
+                                            filterData.getSelectedCategory() ==
+                                                    "Mindfulness"
+                                                ? AppColors.primaryWhite
+                                                : AppColors.primaryBlack,
+                                      ),
+                                    ),
+                                    onSelected: (bool value) {
+                                      filterData.filteredData("Mindfulness");
+                                    },
+                                    selected:
+                                        filterData.getSelectedCategory() ==
+                                            "Mindfulness",
+                                    selectedColor: AppColors.primaryPurple,
+                                    showCheckmark: false,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      side: BorderSide(
+                                        color: AppColors.primaryPurple
+                                            .withOpacity(0.5),
+                                        width: 2,
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 8,
                                   ),
                                   FilterChip(
                                     label: const Text("Meditation"),
-                                    onSelected: (value) {},
+                                    onSelected: (bool value) {
+                                      filterData.filteredData("Meditation");
+                                    },
+                                    selected:
+                                        filterData.getSelectedCategory() ==
+                                            "Meditation",
+                                    selectedColor: AppColors.primaryPurple,
+                                    showCheckmark: false,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      side: BorderSide(
+                                        color: AppColors.primaryPurple
+                                            .withOpacity(0.5),
+                                        width: 2,
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 8,
                                   ),
                                   FilterChip(
                                     label: const Text("Sleep Stories"),
-                                    onSelected: (value) {},
+                                    onSelected: (bool value) {
+                                      filterData.filteredData("Sleep Stories");
+                                    },
+                                    selected:
+                                        filterData.getSelectedCategory() ==
+                                            "Sleep Stories",
+                                    selectedColor: AppColors.primaryPurple,
+                                    showCheckmark: false,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                      side: BorderSide(
+                                        color: AppColors.primaryPurple
+                                            .withOpacity(0.5),
+                                        width: 2,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
