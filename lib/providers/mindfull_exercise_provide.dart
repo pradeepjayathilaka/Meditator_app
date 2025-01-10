@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:meditator_app/models/mindfull_exercise_mdel.dart';
 
 class MindfullExerciseProvide extends ChangeNotifier {
@@ -161,5 +162,23 @@ class MindfullExerciseProvide extends ChangeNotifier {
       ),
     ];
     mindfullExercises = List.from(_allMindfullExercises);
+  }
+
+  //method  to fetch all the mindfullness exercises
+  List<MindfulnessExercise> getAllMindfullExercise() {
+    return mindfullExercises;
+  }
+
+  //Method to search by the title
+  void searchMindfullExercise(String query) {
+    if (query.isEmpty) {
+      mindfullExercises = List.from(_allMindfullExercises);
+    } else {
+      mindfullExercises = _allMindfullExercises
+          .where((exercise) =>
+              exercise.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
   }
 }

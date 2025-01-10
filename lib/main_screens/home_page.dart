@@ -147,7 +147,16 @@ class HomePage extends StatelessWidget {
                                     width: 8,
                                   ),
                                   FilterChip(
-                                    label: const Text("Meditation"),
+                                    label: Text(
+                                      "Meditation",
+                                      style: TextStyle(
+                                        color:
+                                            filterData.getSelectedCategory() ==
+                                                    "Meditation"
+                                                ? AppColors.primaryWhite
+                                                : AppColors.primaryBlack,
+                                      ),
+                                    ),
                                     onSelected: (bool value) {
                                       filterData.filteredData("Meditation");
                                     },
@@ -169,7 +178,16 @@ class HomePage extends StatelessWidget {
                                     width: 8,
                                   ),
                                   FilterChip(
-                                    label: const Text("Sleep Stories"),
+                                    label: Text(
+                                      "Sleep Stories",
+                                      style: TextStyle(
+                                        color:
+                                            filterData.getSelectedCategory() ==
+                                                    "Sleep Stories"
+                                                ? AppColors.primaryWhite
+                                                : AppColors.primaryBlack,
+                                      ),
+                                    ),
                                     onSelected: (bool value) {
                                       filterData.filteredData("Sleep Stories");
                                     },
