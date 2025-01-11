@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meditator_app/models/mindfull_exercise_mdel.dart';
 import 'package:meditator_app/providers/mindfull_exercise_provide.dart';
+import 'package:meditator_app/router/router_names.dart';
 import 'package:meditator_app/utils/colors.dart';
 import 'package:meditator_app/utils/text_styles.dart';
 import 'package:provider/provider.dart';
@@ -69,35 +73,46 @@ class MinfullExercisesPage extends StatelessWidget {
                       itemBuilder: (context, index) {
                         MindfulnessExercise singleMindfulnessExercise =
                             mindfulnessExercisesnew.mindfullExercises[index];
-                        return Container(
-                          margin: EdgeInsets.symmetric(vertical: 5),
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryDarkBlue.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: ListTile(
-                            leading: ClipRRect(
+                        return GestureDetector(
+                          onTap: () {
+                            GoRouter.of(context).pushNamed(
+                                RouterNames.mindfullExercise,
+                                queryParameters: {
+                                  "mindfullExercise": jsonEncode(
+                                      singleMindfulnessExercise.toJson())
+                                });
+                          },
+                          child: Container(
+                            margin: EdgeInsets.symmetric(vertical: 5),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryDarkBlue.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                singleMindfulnessExercise.imagePath,
-                                width: MediaQuery.of(context).size.width * 0.13,
-                                height:
-                                    MediaQuery.of(context).size.width * 0.13,
-                                fit: BoxFit.cover,
+                            ),
+                            child: ListTile(
+                              leading: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  singleMindfulnessExercise.imagePath,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.13,
+                                  height:
+                                      MediaQuery.of(context).size.width * 0.13,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            title: Text(
-                              singleMindfulnessExercise.name,
-                              style: AppTextStyles.subtitleStyle,
-                            ),
-                            subtitle: Text(
-                              singleMindfulnessExercise.description,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.bodyStyle.copyWith(
-                                color:
-                                    AppColors.primaryDarkBlue.withOpacity(0.7),
-                                fontSize: 14,
+                              title: Text(
+                                singleMindfulnessExercise.name,
+                                style: AppTextStyles.subtitleStyle,
+                              ),
+                              subtitle: Text(
+                                singleMindfulnessExercise.description,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTextStyles.bodyStyle.copyWith(
+                                  color: AppColors.primaryDarkBlue
+                                      .withOpacity(0.7),
+                                  fontSize: 14,
+                                ),
                               ),
                             ),
                           ),

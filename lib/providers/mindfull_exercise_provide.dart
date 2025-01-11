@@ -20,7 +20,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Repeat for the duration of the exercise."
         ],
         duration: 5,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
         imagePath: "assets/images/mindfull.png",
       ),
       MindfulnessExercise(
@@ -36,7 +36,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
         ],
         imagePath: "assets/images/mindfull.png",
         duration: 10,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+         instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Stress Relief",
@@ -51,7 +51,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Slowly move your attention up through your body, relaxing each part as you go."
         ],
         duration: 15,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Focus",
@@ -66,7 +66,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "If your mind wanders, gently bring it back to the task at hand."
         ],
         duration: 10,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+         instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Anxiety Relief",
@@ -83,7 +83,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Identify one thing you can taste."
         ],
         duration: 10,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Mindfulness",
@@ -98,7 +98,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Focus on your breath and the rhythm of your movement."
         ],
         duration: 15,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Self-Acceptance",
@@ -113,7 +113,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Extend these phrases to others: 'May you be happy. May you be healthy. May you be safe. May you live with ease.'"
         ],
         duration: 10,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Relaxation",
@@ -128,7 +128,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Move up through your body, tensing and relaxing each muscle group."
         ],
         duration: 15,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Energy",
@@ -143,7 +143,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "Hold each stretch for a few breaths, focusing on the sensations in your body."
         ],
         duration: 5,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
       MindfulnessExercise(
         category: "Creativity",
@@ -158,7 +158,7 @@ class MindfullExerciseProvide extends ChangeNotifier {
           "If your mind wanders, gently bring your attention back to the drawing."
         ],
         duration: 10,
-        instructionsUrl: "https://github.com/HGSChandeepa/Meditate",
+         instructionsUrl: "https://github.com/pradeepjayathilaka/Meditator_app",
       ),
     ];
     mindfullExercises = List.from(_allMindfullExercises);
