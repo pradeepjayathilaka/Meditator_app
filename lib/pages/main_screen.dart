@@ -17,8 +17,8 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   static List<Widget> _pages = [
-    MinfullExercisesPage(),
     HomePage(),
+    MinfullExercisesPage(),
     CreateCustomeExercisePage(),
     CustomExercisesPage(),
     ProfilePage(),

@@ -1,7 +1,9 @@
 import 'dart:convert';
 
 import 'package:go_router/go_router.dart';
+import 'package:meditator_app/models/function_data_model.dart';
 import 'package:meditator_app/models/mindfull_exercise_mdel.dart';
+import 'package:meditator_app/pages/function_page.dart';
 import 'package:meditator_app/pages/main_screen.dart';
 import 'package:meditator_app/pages/mindfull_exercise_details_page.dart';
 import 'package:meditator_app/router/router_names.dart';
@@ -29,7 +31,16 @@ class RouterClass {
             mindfulnessExercise: mindfulnessExercise,
           );
         },
-      )
+      ),
+      GoRoute(
+          path: "/function",
+          name: RouterNames.function,
+          builder: (context, state) {
+            final FunctionData functionData = state.extra as FunctionData;
+            return FunctionPage(
+              functionData: functionData,
+            );
+          })
     ],
   );
 }
